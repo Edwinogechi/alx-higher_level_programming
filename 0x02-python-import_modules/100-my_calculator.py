@@ -4,7 +4,7 @@ if __name__ == "__main__":
 
     # Import the functions from calculator_1.py
     from calculator_1 import add, sub, mul, div
-    # Import the sys module for command line arguments 
+    # Import the sys module for command line arguments
     import sys
 
     # Check that the correct number of arguments have been provided
