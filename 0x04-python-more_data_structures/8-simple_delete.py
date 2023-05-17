@@ -2,14 +2,11 @@
 
 def simple_delete(a_dictionary, key=""):
 
-    # Create a copy of the dictionary
-    modified_dictionary = a_dictionary.copy()
-
     # Check if the key exists in the dictionary
-    if key in modified_dictionary:
+    if a_dictionary.get(key) is not None:
 
         # If the key exists, remove it from the copy
-        del modified_dictionary[key]
+        del a_dictionary[key]
 
     # Return the modified dictionary
-    return modified_dictionary
+    return a_dictionary
