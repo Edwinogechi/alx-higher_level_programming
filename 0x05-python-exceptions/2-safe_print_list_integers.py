@@ -5,8 +5,9 @@ def safe_print_list_integers(my_list=[], x=0):
 
     for e in range(0, x):
         try:
-            """Print the interger followed by a new line"""
-            print("{:d}".format(my_list[e]), end=" ")
+            if isinstance(my_list[e], int):
+                """Print the interger followed by a new line"""
+                print("{:d}".format(my_list[e]), end=" ")
             int_count += 1  # Increse the count of integers printed by one
         except(TypeError, ValueError):
             continue
