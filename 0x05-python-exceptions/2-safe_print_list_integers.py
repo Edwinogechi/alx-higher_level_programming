@@ -3,7 +3,7 @@
 def safe_print_list_integers(my_list=[], x=0):
     int_count = 0  # Variable to track the no. of elements prnted
 
-    for e in range(x):
+    for e in range(0, x):
         try:
             """Print the interger followed by a new line"""
             print("{:d}".format(my_list[e]), end=" ")
