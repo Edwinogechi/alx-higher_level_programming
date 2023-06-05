@@ -1,0 +1,1 @@
+This is my README on Python More Classes and Objects, I learned about class and static methods and the differences anr relations between class and instance, and the application of both the special '__repr__' and  '__str__' methods.
