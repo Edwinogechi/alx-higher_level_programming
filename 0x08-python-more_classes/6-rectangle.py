@@ -4,6 +4,9 @@
 
 class Rectangle:
     """Represent a rectangle by both height and width"""
+
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Initializes a class object(Rectanle)
 
@@ -13,11 +16,12 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
         """Get and Set rectangle width"""
-        return self.__width
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -31,7 +35,7 @@ class Rectangle:
     @property
     def height(self):
         """Get and Set the rectangle height"""
-        return self.__height
+        return (self.__height)
 
     @height.setter
     def height(self, value):
@@ -44,27 +48,28 @@ class Rectangle:
 
     def area(self):
         """Returns the area of rectangle"""
-        return self.width * self.height
+        return (self.width * self.height)
 
     def perimeter(self):
         """Returns perimeter of rectangle"""
-        if self.width is 0 or self.height is 0:
-            return 0
+        if self.width == 0 or self.height == 0:
+            return (0)
         else:
             return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
         """Return the printable String representation of class object"""
-        if self.width is 0 or self.height is 0:
+        if self.width == 0 or self.height == 0:
             return ("")
         else:
             return ((('#' * self.width) + "\n") * self.height)[:-1]
 
     def __repr__(self):
         """Return the string representation of instance(Rectangle)"""
-        return 'Rectangle({}, {})'.format(self.width, self.height)
+        return ("Rectangle({}, {})".format(self.width, self.height))
 
     def __del__(self):
         """Delete a Rectangle and print a message on each deletion."""
         type(self).number_of_instances -= 1
+
         print("Bye rectangle...")
