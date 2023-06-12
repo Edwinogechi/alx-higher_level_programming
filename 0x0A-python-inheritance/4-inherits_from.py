@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A Module defining a function testing if object inherited from given class."""
+"""A Module defining a function testing an object and an inherited class."""
 
 
 def inherits_from(obj, a_class):
