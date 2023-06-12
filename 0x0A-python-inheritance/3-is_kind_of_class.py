@@ -7,7 +7,7 @@ def is_kind_of_class(obj, a_class):
     from given class.
 
     Arguments:
-        obj(any): object to be tested 
+        obj(any): object to be tested
         class(type): The class to match against the given object
     """
     if isinstance(obj, a_class):
