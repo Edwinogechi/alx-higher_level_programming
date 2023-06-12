@@ -4,4 +4,7 @@
 
 class BaseGeometry:
     """An empty class that represent base geometry."""
-    pass
+
+    def area(self):
+        """The area not implemented"""
+        raise Exception("area() is not implemented")
