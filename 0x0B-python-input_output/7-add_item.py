@@ -3,14 +3,18 @@
 
 
 import sys
-if __name__ == "__main__":
-    save_to_json_file = __import__(5-save_to_json_file.py).save_to_json_file
-    load_from_json_file = \
-        __import__(6-load_from_json_file.py).load_from_json_file
+import os
+save_to_json_file = __import__(5-save_to_json_file.py).save_to_json_file
+load_from_json_file = __import__(6-load_from_json_file.py).load_from_json_file
+args = sys.argv
 
-    try:
-        items = load_from_jason_file("add_item.json")
-    except FileNotFoundErrror:
-        items = []
-    items.extend(sys.argv[1:])
-    save_to_json_file(items, "add_item.json")
+if not os.path.exists("add_item.json"):
+    with open("add_item.json", "w", encoding="utf") as f:
+        f.write("[]")
+
+obj = load_from_json_file("add_item.json")
+
+for arg in args[1:]:
+    obj.append(arg)
+
+save_to_json_file(obj, "add_item.json")
