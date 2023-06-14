@@ -19,10 +19,11 @@ class Student:
 
     def to_json(self, attrs=None):
         """Find dict representation of instance(student)"""
-        valid_key = []
-        ret_dict = {}
-        if (type(attrs) ==  is list:
-            for item in attrs:
-                if type(item) is str and item in self.__dict__:
-            return ret_dict
-        return self.__dict__
+
+        if type(attrs) is list:
+            return {k: v for k, v in self.__dict__.items() if k in attrs}
+        return self.__dict__.copy()
+
+    def reload_from_json(self, json):
+        for key, value in json.items():
+            setattr(self, key, value)
