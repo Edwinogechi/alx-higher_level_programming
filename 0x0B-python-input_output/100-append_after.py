@@ -16,5 +16,5 @@ def append_after(filename="", search_string="", new_string=""):
             if search_string in text:
                 line_list.append(new_string)
 
-    with open(filename, "w", encoding) as i:
+    with open(filename, "w", encoding) as s:
         w.write(text)
