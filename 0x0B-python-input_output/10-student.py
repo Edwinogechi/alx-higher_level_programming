@@ -30,11 +30,11 @@ class Student:
             return {k: v for k, v in self.__dict__.items() if k in attrs}
         return self.__dict__.copy()
 
-    def reload_from_json(self, json):
-        """Updates the student object using data from a JSON representation.
+    #def reload_from_json(self, json):
+        #"""Updates the student object using data from a JSON representation.
 
-        Args:
+        #Args:
             json (dict): Dictionary containing the student data in JSON format.
-        """
-        for key, value in json.items():
+        #"""
+        #for key, value in json.items():
             setattr(self, key, value)
