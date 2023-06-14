@@ -9,12 +9,12 @@ def append_after(filename="", search_string="", new_string=""):
         search_string (str): The text being searched for within file
         new_string (string): Text to be updated
     """
-    text = []
-    with open(filename, "r", encoding) as s:
-        for text in s:
-            line_list.append(text)
-            if search_string in text:
-                line_list.append(new_string)
+    lines = []
+    with open(filename, "r") as f:
+        for line in f:
+            lines.append(line)
+            if search_string in line:
+                lines.append(new_string)
 
-    with open(filename, "w", encoding) as s:
-        w.write(text)
+    with open(filename, "w") as f:
+        f.write(text)
