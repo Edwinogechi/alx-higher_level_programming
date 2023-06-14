@@ -29,7 +29,7 @@ class Rectangle(BaseGeometry):
 
 class Square(Rectangle):
     """A class that defines a square that inherits from Rectangle"""
-     def __init__(self, size):
+    def __init__(self, size):
         """Instantiate a new object(square).
 
         Arguments:
