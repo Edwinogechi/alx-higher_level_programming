@@ -10,12 +10,11 @@ def append_after(filename="", search_string="", new_string=""):
         new_string (str): Text to be updated
     """
     lines = []
-    with open(filename, "r") as f:
-        for line in f:
-            lines.append(line)
+    with open(filename, "r") as r:
+        for line in r:
+            lines += line
             if search_string in line:
-                lines.append(new_string + "\n")
+                lines += new_string
 
-    with open(filename, "w") as f:
-        for line in lines:
-            f.write(line)
+    with open(filename, "w") as w:
+        w.write(lines)
