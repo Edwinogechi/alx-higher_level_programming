@@ -26,6 +26,9 @@ class Rectangle(BaseGeometry):
         """Return string representation of the triangle"""
         return '[Rectangle] {}/{}'.format(self.__width, self.__height)
 
+
+class Square(Rectangle):
+    """A class that defines a square that inherits from Rectangle"""
      def __init__(self, size):
         """Instantiate a new object(square).
 
