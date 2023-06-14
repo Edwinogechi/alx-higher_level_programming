@@ -18,12 +18,23 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Find dict representation of instance(student)"""
+        """Find dict representation of instance(student)
+
+         Args:
+            attrs (list): Optnl attrs list to include in JSON representation.
+        Returns:
+            dict: A dictionary representing the student object.
+        """
 
         if type(attrs) is list:
             return {k: v for k, v in self.__dict__.items() if k in attrs}
         return self.__dict__.copy()
 
     def reload_from_json(self, json):
+        """Updates the student object using data from a JSON representation.
+
+        Args:
+            json (dict): Dictionary containing the student data in JSON format.
+        """
         for key, value in json.items():
             setattr(self, key, value)
