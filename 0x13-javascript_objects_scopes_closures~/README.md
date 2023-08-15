@@ -1,0 +1,1 @@
+This is my review on objects and scopes closure in Javascript
