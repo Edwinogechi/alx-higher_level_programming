@@ -9,4 +9,4 @@ function findFactorial (n) {
   return findFactorial(n - 1) * n;
 }
 
-console.log(findFactorial(n))
+console.log(findFactorial(n));
