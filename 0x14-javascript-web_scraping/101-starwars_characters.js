@@ -18,7 +18,7 @@ request(apiUrl, (error, response, body) => {
     const movieData = JSON.parse(body);
     const characters = movieData.characters;
 
-    function getCharacterName(index) {
+    function getCharacterName (index) {
       if (index < characters.length) {
         request(characters[index], (charError, charResponse, charBody) => {
           if (!charError && charResponse.statusCode === 200) {
